@@ -1,3 +1,4 @@
+#%%
 '''Fitting functions to visualise how predicted data compares to actual data'''
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -82,7 +83,7 @@ def Visualise_WT():
         Regulator.plot(data_.S, Regulator_est_array,alpha = 0.1, c = 'dimgrey')
         Sensor.plot(data_.S, Sensor_est_array, alpha = 0.1, c = 'darkorange')
     return
-#Visualise_WT()
+Visualise_WT()
 # %%
 def Visualise_SM_fit(mut_name, iter, plot_num, save:bool):
     '''Looking at the general fits to data'''
@@ -165,7 +166,7 @@ def Visualise_SM_fit(mut_name, iter, plot_num, save:bool):
 
     return #fig # score_list, set_list
 
-#Visualise_SM_fit(mut_name='Regulator6',iter = 'final', plot_num= 50, save=False)
+Visualise_SM_fit(mut_name='Regulator6',iter = 'final', plot_num= 50, save=False)
 #%%
 '''Visualising fits of pairwise predictions'''
 def Visualise_mut(mutants:list):
